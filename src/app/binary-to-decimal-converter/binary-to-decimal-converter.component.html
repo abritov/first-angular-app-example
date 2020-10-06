@@ -1,6 +1,19 @@
-<form class="binary-to-decimal-converter-form">
-  <mat-form-field class="binary-to-decimal-converter-full-width">
-    <mat-label>Enter binary number to convert</mat-label>
-    <input matInput placeholder="1111111111111111" value="11111111">
-  </mat-form-field>
+<form [formGroup]="askNumberForm" novalidate (ngSubmit)="onSubmit()">
+  <mat-card class="binary-converter">
+    <mat-card-header>
+      <mat-card-title>Binary converter</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput #binaryNumber maxlength="5" placeholder="Binary number" type="number" formControlName="binaryNumber">
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" type="submit">Convert</button>
+    </mat-card-actions>
+  </mat-card>
 </form>
