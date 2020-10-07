@@ -9,7 +9,9 @@ import { BinaryToDecimalConverterService } from './binary-to-decimal-converter.s
 })
 export class BinaryToDecimalConverterComponent {
   askNumberForm = this.fb.group({
-    binaryNumber: [null, Validators.required],
+    binaryNumber: [null, Validators.compose([
+      Validators.required, Validators.pattern('[01]+')])
+    ],
   });
 
   constructor(
@@ -18,6 +20,10 @@ export class BinaryToDecimalConverterComponent {
     ) {}
 
   onSubmit(): void {
+    if (this.askNumberForm.controls.binaryNumber.errors) {
+      alert('invalid number');
+      return;
+    }
     const input = this.askNumberForm.value.binaryNumber;
     this.converter.convert(input).subscribe(result => {
       if (result.err) {
