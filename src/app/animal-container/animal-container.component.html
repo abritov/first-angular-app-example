@@ -3,9 +3,9 @@
     <mat-card-title>{{ animal.toString() }}</mat-card-title>
   </mat-card-header>
   <mat-card-actions>
-    <button mat-raised-button color="primary" type="submit">Swim</button>
+    <button mat-raised-button color="primary" type="submit" (click)="animal.swim()">Swim</button>
   </mat-card-actions>
   <mat-card-actions *ngIf="animal.canBite()">
-    <button mat-raised-button color="primary" type="submit">Bite</button>
+    <button mat-raised-button color="primary" type="submit" (click)="animal.bite()">Bite</button>
   </mat-card-actions>
 </mat-card>
