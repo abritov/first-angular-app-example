@@ -4,7 +4,7 @@ import { BinaryToDecimalConverterComponent } from './binary-to-decimal-converter
 
 
 const routes: Routes = [
-  { path: 'binary-to-decimal-converter-component', component: BinaryToDecimalConverterComponent },
+  { path: 'test1', component: BinaryToDecimalConverterComponent },
 ];
 
 @NgModule({
