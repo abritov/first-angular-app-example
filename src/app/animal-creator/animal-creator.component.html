@@ -1,0 +1,23 @@
+<form [formGroup]="createAnimalForm" novalidate (ngSubmit)="onSubmit()">
+  <mat-card class="animal-form">
+    <mat-card-header>
+      <mat-card-title>Create animal</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div class="col">
+          <mat-radio-group formControlName="animalType">
+            <mat-radio-button value="shark">Shark</mat-radio-button>
+            <mat-radio-button value="turtle">Turtle</mat-radio-button>
+            <mat-radio-button value="jellyfish">Jellyfish</mat-radio-button>
+            <mat-radio-button value="starfish">Starfish</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" type="submit">Submit</button>
+    </mat-card-actions>
+  </mat-card>
+</form>
+<ng-template appAnimalContainer></ng-template>

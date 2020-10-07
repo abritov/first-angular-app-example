@@ -13,11 +13,17 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AnimalCreatorComponent } from './animal-creator/animal-creator.component';
+import { AnimalContainerComponent } from './animal-container/animal-container.component';
+import { AnimalContainerDirective } from './animal-container/animal-container.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     BinaryToDecimalConverterComponent,
+    AnimalCreatorComponent,
+    AnimalContainerComponent,
+    AnimalContainerDirective
   ],
   imports: [
     BrowserModule,
