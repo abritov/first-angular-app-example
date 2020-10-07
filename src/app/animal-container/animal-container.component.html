@@ -1,1 +1,11 @@
-<p>animal-container works!</p>
+<mat-card class="animal-form">
+  <mat-card-header>
+    <mat-card-title>{{ animal.toString() }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" type="submit">Swim</button>
+  </mat-card-actions>
+  <mat-card-actions *ngIf="animal.canBite()">
+    <button mat-raised-button color="primary" type="submit">Bite</button>
+  </mat-card-actions>
+</mat-card>

@@ -3,6 +3,10 @@ export abstract class Animal {
   abstract skills(): string[];
   abstract toString(): string;
 
+  canBite(): boolean {
+    return this.skills().includes('bite');
+  }
+
   display(): void {
       console.log(`display ${this.toString()}`);
   }
